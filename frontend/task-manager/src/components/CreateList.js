@@ -21,7 +21,7 @@ const CreateList = () => {
             console.log(list.title);
             addList(list.title);
             setList({ title: "" });
-            navigate("/");
+            navigate("/home");
         }
         else{
             console.log("Enter a valid title");
@@ -36,7 +36,7 @@ const CreateList = () => {
                 <input placeholder='Enter the name of the list' className={`border rounded-md py-3 px-3 w-4/5 outline-none ${showError ? "border-red-600":""}`} name='title' onChange={onChange} value={list.title} />
                 <div className='flex items-center justify-end my-3 w-4/5'>
                     <button className="border bg-teal-500 text-white px-3 py-2 font-extrabold my-4 mx-3 cursor-pointer" onClick={handleClick}>Create</button>
-                    <button className="border bg-teal-500 text-white px-3 py-2 font-extrabold my-4"><Link to="/">Cancel</Link></button>
+                    <button className="border bg-teal-500 text-white px-3 py-2 font-extrabold my-4"><Link to="/home">Cancel</Link></button>
                 </div>
             </div>
         </div>

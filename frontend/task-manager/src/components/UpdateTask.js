@@ -21,7 +21,7 @@ const UpdateTask = () => {
         if (task.description.length >= 5) {
             editTask(list_id,task_id, task.description,task.dueDate);
             // setTask({ title: "" });
-            navigate("/");
+            navigate("/home");
         }
         else {
             console.log("Enter a valid description of the task");
@@ -46,7 +46,7 @@ const UpdateTask = () => {
 
                 <div className='flex items-center justify-end my-3 w-4/5'>
                     <button className="border bg-teal-500 text-white px-3 py-2 font-extrabold my-4 mx-3 cursor-pointer" onClick={handleClick}>Update</button>
-                    <button className="border bg-teal-500 text-white px-3 py-2 font-extrabold my-4"><Link to="/">Cancel</Link></button>
+                    <button className="border bg-teal-500 text-white px-3 py-2 font-extrabold my-4"><Link to="/home">Cancel</Link></button>
                 </div>
             </div>
         </div>

@@ -25,8 +25,8 @@ const TaskState = (props) => {
     }
 
     // Adding a new task
-
-    const addTask = async (listId, description, dueDate) => {
+    const recipientEmail = localStorage.getItem('recipientEmail'); 
+    const addTask = async (listId, description, dueDate,recipientEmail) => {
 
         const response = await fetch(`${host}/lists/${listId}/addtask`, {
             method: 'POST',
@@ -35,7 +35,7 @@ const TaskState = (props) => {
                 'Content-Type': 'application/json',
             },
 
-            body: JSON.stringify({ description, dueDate }),
+            body: JSON.stringify({ description, dueDate,recipientEmail}),
 
         });
         const task = await response.json();

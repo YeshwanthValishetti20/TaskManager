@@ -93,6 +93,8 @@ router.delete('/deletelist/:id', fetchUser, async (req, res) => {
         for(let i=0;i<tasks.length;i++){
             let task=await Task.findByIdAndDelete(tasks[i]._id);
             res.json("The task deleted of the list",task);
+            
+
         }
 
 
