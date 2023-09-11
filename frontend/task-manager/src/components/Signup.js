@@ -87,7 +87,7 @@ const Signup = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`http://localhost:80/auth/createUser`, {
+    const response = await fetch(`http://localhost:8000/auth/createUser`, {
       method: 'POST',
 
       headers: {

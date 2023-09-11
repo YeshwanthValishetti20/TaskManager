@@ -242,7 +242,7 @@ const Task = require('./models/Task'); // Import the Task model
 connectToMongo();
 
 const app = express();
-const port = 80;
+const port = 8000;
 app.use(cors());
 
 app.use(express.json());
@@ -347,7 +347,7 @@ cron.schedule('0 */2 * * *', () => {
 });
 
 app.listen(port, () => {
-  console.log(`The express app is running on port ${80}`);
+  console.log(`The express app is running on port ${8000}`);
   
    
   });

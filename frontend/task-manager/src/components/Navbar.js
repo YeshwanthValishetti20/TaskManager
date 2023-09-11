@@ -71,7 +71,7 @@ const Navbar = () => {
   };
 
   const getUsername = async () => {
-    const response = await fetch(`http://localhost:80/auth/getUser`, {
+    const response = await fetch(`http://localhost:8000/auth/getUser`, {
       method: 'POST',
       headers: {
         'auth-token': localStorage.getItem('token'),

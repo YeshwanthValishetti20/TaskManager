@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import listContext from './listContext'
 
 const ListState = (props) => {
-    const host = "http://localhost";
+    const host = "http://localhost:8000";
     const [lists, setLists] = useState([]);
 
     //Fetching all lists

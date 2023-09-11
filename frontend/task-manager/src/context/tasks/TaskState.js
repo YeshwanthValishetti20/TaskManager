@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import taskContext from './taskContext'
 
 const TaskState = (props) => {
-    const host = "http://localhost";
+    const host = "http://localhost:8000";
     const [tasks, setTasks] = useState([]);
 
     //Fetching all tasks
