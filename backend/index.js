@@ -244,6 +244,11 @@ connectToMongo();
 const app = express();
 const port = 8000;
 app.use(cors());
+app.use(
+  cors({
+
+  })
+);
 
 app.use(express.json());
 
@@ -344,6 +349,11 @@ const sendTaskReminders = async () => {
 cron.schedule('0 */2 * * *', () => {
   sendTaskReminders();
   console.log('Task reminder job executed every 2 hours');
+});
+
+app.get('/hello', (req, res) => {
+  console.log('Backend is running!'); // This will print to your backend's console
+  res.send('Hello from the backend!');
 });
 
 app.listen(port, () => {

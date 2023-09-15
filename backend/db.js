@@ -1,7 +1,7 @@
 // Connecting to moongose
 const mongoose=require("mongoose");
 
-const mongoURL="mongodb://127.0.0.1:27017/games";
+const mongoURL="mongodb+srv://vikranthpadidam:iYF0p9er7ithjX5y@cluster0.i7qbox7.mongodb.net/games?retryWrites=true&w=majority";
 
 const connecttoMongo=()=>{
     mongoose.connect(mongoURL,()=>{

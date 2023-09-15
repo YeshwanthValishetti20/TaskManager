@@ -33,6 +33,7 @@ router.post('/createUser', [
   if (user) {
     return res.status(400).json({ success,"error": "A user with this email address already exists" })
   }
+  console.log(user);
   const salt=await bcrypt.genSalt(10)
   const secPass=await bcrypt.hash(req.body.password,salt)   //Hashing password using bycrypt
   user = await User.create({     //using this to create a user of the moongose model and storing it in the database instead of the save function which we were using earlier
